@@ -8,9 +8,7 @@ export default function Text({ sendText }) {
 
   const handleSend = () => {
     if (text !== "") {
-      sendText({ text });
-      setText("");
-      setMessage([...message, text]);
+      sendText({ text }, setText, setMessage);
     } else return;
   };
 
