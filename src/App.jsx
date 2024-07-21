@@ -1,10 +1,14 @@
+import { useState } from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar";
 import Text from "./components/Text";
+import Message from "./components/Message";
 import "./App.css";
 
 export default function App() {
-  const sendText = async (text, setText, setMessage) => {
+  const [message, setMessage] = useState([]);
+
+  const sendText = async (text, setText) => {
     try {
       const data = await axios.post(
         "https://texts-api-zmd6.onrender.com/",
@@ -22,6 +26,7 @@ export default function App() {
   return (
     <div>
       <Navbar />
+      <Message message={message} />
       <Text sendText={sendText} />
     </div>
   );

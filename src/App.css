@@ -2,6 +2,10 @@ body {
   padding: 0;
   margin: 0;
   background-color: #f7ecdc;
+  background-image: url("./assets/rabbit&billi.webp");
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .navbar {
@@ -11,4 +15,19 @@ body {
   color: rgba(249, 244, 254, 0.907);
   font-size: 1.3em;
   font-family: cursive;
+}
+
+.message {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2ch;
+  padding: 1em;
+  overflow-wrap: anywhere;
+  height: 70vh;
+  color: #353535;
+  font-size: 1.1em;
+  overflow-y: scroll;
+  font-weight: 600;
+  font-family: sans-serif;
 }
